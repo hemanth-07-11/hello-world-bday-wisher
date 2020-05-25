@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style type="text/css">
+		
+			*{
+				padding:0px;
+				margin:0px;
+			}
+
+			.nameLable{
+			
+				display:none;
+				text-shadow:2px 2px 5px green;
+				font-size:75px;
+                                color: white;
+				position:absolute;
+				top:10px;
+				left:5em;
+				font-family:Segoe Print;
+				transform:rotate(5deg);
+			}
+.th {
+  position: absolute;
+  top: 80px;
+  left: 7px;
+//border: 3px solid black;
+//border-radius:50%; 
+ color:#F1B8FA;
+ -ms-transform: rotate(278deg); /* IE 9 */
+  transform: rotate(342deg);
+  text-shadow: 1px 3px grey;
+  font-size: 25px;
+   -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+
+}
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px black, 0 0 20px black , 0 0 30px blue, 0 0 40px black, 0 0 50px black, 0 0 60px black, 0 0 70px black;
+  }
+  
+  to {
+    text-shadow: 0 0 20px black, 0 0 30px #ff4da6, 0 0 40px black, 0 0 50px yellow, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px black
+  }}
+
+.tr {
+  position: absolute;
+  top: 80px;
+  right: 25px;
+//border: 3px solid black;
+//border-radius:50%; 
+ color: #EEF27A;-ms-transform: rotate(278deg); /* IE 9 */
+  transform: rotate(350deg);
+  text-shadow: 1px 3px grey;
+  font-size: 25px;
+   -webkit-animation: glows 1s ease-in-out infinite alternate;
+  -moz-animation: glows 1s ease-in-out infinite alternate;
+  animation: glows 1s ease-in-out infinite alternate;}
+
+@-webkit-keyframes glows {
+  from {
+    text-shadow: 0 0 10px black, 0 0 20px black , 0 0 30px blue, 0 0 40px black, 0 0 50px black, 0 0 60px black, 0 0 70px black;
+  }
+  
+  to {
+    text-shadow: 0 0 20px black, 0 0 30px #ff4da6, 0 0 40px black, 0 0 50px yellow, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px black
+  }}
+.ts {
+  position: absolute;
+  bottom: 50px;
+  left: 25px;
+//border: 3px solid black;
+//border-radius:50%; 
+ color:#ABF5A7;-ms-transform: rotate(278deg); /* IE 9 */
+  transform: rotate(345deg);
+  text-shadow: 1px 3px grey;
+  font-size: 25px;
+   -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+			
+		</style>
+	</head>
+	<body>
+		<div class="container">
+
+			
+			<img src="center.jpg" class="center" />
+
+			<span class="nameLable"></span>
+		</div>
+		
+		<script src="jquery.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function (){
+		
+			
+			$('head title').text('Hemanth Wishes Birthday');
+			var name=window.prompt("Hemanth says : Enter Your Name: ");
+			if(name!=null && name!="exit" && name!="Exit")
+			{
+				$('head title').text('Welcome '+name);
+				var windowWidth=$(window).width();
+				var windowHeight=$(window).height();
+				$('.container .center').css({"width":windowWidth,"height":windowHeight});
+				$('.nameLable').text('Happy birthday ' +name);
+				$('.nameLable').show(1000);
+			}
+			else if(name=="exit" || name=="Exit")
+			{
+				window.close();
+			}
+			else
+			{
+				$('.container .center').hide();
+				$('.nameLable').hide();
+				alert("Enter your Name to continue....");
+				location.reload();
+			}
+		});
+		</script>
+
+<div class="th">
+Warm Wishes from Hemanth <br>
+on your birthday. <br>
+May you get everything <br>
+that you wish for in life.
+</div>
+
+
+<div class="tr">
+Hemanth wishes you a<br>
+very happy birthday <br>
+from a social distance<br>
+ during this lockdown.
+</div>
+
+
+<div class="ts">
+Thank you for being a <br>
+part of my life.<br>
+Stay Blessed.
+</div>
+
+
+
+
+	</body>
+</html>
